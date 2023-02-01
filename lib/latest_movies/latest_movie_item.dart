@@ -49,10 +49,11 @@ class _LatestMovieItemState extends State<LatestMovieItem> {
                         .timeout(Duration(milliseconds: 500), onTimeout: () {
                       print('movie was added');
                       Provider.of<AppConfigProvider>(context,listen: false).changeIsDoneMovie(movieData);
-                      Navigator.of(context).pushNamed(WatchListTab.routeName);
                       setState(() {
 
                       });
+                      Navigator.of(context).pushNamed(WatchListTab.routeName);
+
                     });
                   }else{
                     return ;
